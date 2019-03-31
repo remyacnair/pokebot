@@ -14,12 +14,17 @@ bot.setWebHook(externalUrl + ':443/bot' + token);
 bot.on('message', (msg) => {
     const chatId = msg.chat.id;
     console.log(msg.text)
-    if (msg.text=='Hi'||msg.text=='hi')
-        bot.sendMessage(chatId, 'Hello');
-    else if(msg.text=='Hello')
-        bot.sendMessage(chatId, 'Hi');
-    else
-        bot.sendMessage(chatId, 'Received');
+fun(){let url="http://api.chucknorris.io/jokes/search?query={query}"
+function request(url,function(err,body,response){
+if(err){
+    console.log("Error occured");
+    return
+}
+let data=JSON.parse(response)
+ console.log(data.value)
+   })}
+  
+        bot.sendMessage(chatId, fun());
         
     // send a message to the chat acknowledging receipt of their message
   
