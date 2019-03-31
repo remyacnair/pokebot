@@ -15,7 +15,7 @@ bot.setWebHook(externalUrl + ':443/bot' + token);
 bot.on('message', (msg) => {
     const chatId = msg.chat.id;
     console.log(msg.text)
-fun(){let url="http://api.chucknorris.io/jokes/random"
+fun(){let url="http://api.chucknorris.io/jokes/search?query={query}"
 function request(url,function(err,body,response)
 let data=JSON.parse(response)
  console.log(data.value)
