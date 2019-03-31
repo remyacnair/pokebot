@@ -14,7 +14,11 @@ bot.setWebHook(externalUrl + ':443/bot' + token);
 bot.on('message', (msg) => {
     const chatId = msg.chat.id;
     console.log(msg.text)
+    if (msg.text=='Hi')
+        bot.sendMessage(chatId, 'Hello');
+    if(msg.text=='Hello')
+        bot.sendMessage(chatId, 'Hi');
     // send a message to the chat acknowledging receipt of their message
-    bot.sendMessage(chatId, 'Received your message');
+  
   });
   
